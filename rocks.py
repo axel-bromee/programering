@@ -1,10 +1,6 @@
 import random
 
-'''
-rock = 1
-sicors = 2
-paper = 3
-'''
+ 
 
 hand=[1,2,3]
 
@@ -19,8 +15,19 @@ while score  < 3 and evil_score < 3:
     x=int(input())
 
     y = (random.choice(hand))
-    print (y)
-
+   
+    if x == 1:
+        print("your choice: rock")
+    elif x == 2:
+        print("your choice: sicors")
+    elif x == 3:
+        print("your choice: paper")
+    if y == 1:
+        print("evil choice: rock")
+    elif y == 2:
+        print("evil choice: sicors")
+    elif y == 3:
+        print("evil choice: paper")
 
 
     if y == x:
@@ -28,12 +35,12 @@ while score  < 3 and evil_score < 3:
 
     elif y == 1 and x == 2 or y == 2 and x == 3 or y == 3 and x == 1:
         evil_score += 1
-        print ("lose")
+        print ("you lose")
 
     elif y == 2 and x == 1 or y == 3 and x == 2 or y == 1 and x == 3:
         score += 1
-        print ("win")
+        print ("you win")
 
-    print ("your score", score)
-    print ("evil score", evil_score)
+    print ("your score: ", score)
+    print ("evil score: ", evil_score)
     
